@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import './App.css';
+import background from './assets/backie.png'; 
+import MainPage from './components/pages/MainPage';
 
-function App() {
-  const [count, setCount] = useState(0)
+
+function Canvas() {
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Master Rahm</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <Parallax pages={1}>
+        {/* Background  Layer */}
+        <ParallaxLayer offset={0} speed={1}className='parallax-background' style={{ backgroundImage: `url(${background})` }}>
+        </ParallaxLayer>
+        {/* Content Layer */}
+        <ParallaxLayer offset={0} speed={2.0}>
+          <MainPage />
+        </ParallaxLayer>
+      </Parallax>
+    </div>
+
   )
 }
 
-export default App
+export default Canvas
