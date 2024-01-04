@@ -1,10 +1,4 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
+/* Logo  */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -16,6 +10,105 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.logo.react-native:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+/* Cards */
+.card {
+  padding: 2em;
+}
+/* Special Docs */
+.read-the-docs {
+  color: #888;
+}
+
+/* Top-Left Navigation Bar */
+.navbar-top-left {
+  position: absolute;
+  top: 10;
+  left: 50;
+  height: 100%; /* Set full height */
+  padding: 20px; /* Adjust padding as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 10;
+}
+.navbar-top-left ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+.navbar-top-left li {
+  cursor: pointer;
+  margin-bottom: 10px; /* Adjust margin between links */
+}
+/* Style for active link if needed */
+.navbar-top-left a:hover {
+  text-decoration: line-through;
+  text-decoration-color: aqua;
+}
+.navbar-top-left a.active {
+  color: #00a015; /* Set active link color */
+}
+
+/* Bottom-Right Navigation Bar */
+.navbar-bottom-right {
+  position: absolute;
+  padding: 20px;
+  bottom: 60px; /* Adjust this value based on your footer's height */
+  right: 0;
+  z-index: 11;
+}
+.navbar-bottom-right ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+.navbar-bottom-right li {
+  cursor: pointer;
+}
+.navbar-bottom-right li:hover {
+  text-decoration: line-through;
+  text-decoration-color:aqua
+}
+
+/* Content */
+/* Add this CSS to your stylesheets or inline style */
+
+
+/* Style for paragraphs within the center section */
+p {
+  margin: auto 300px;
+  line-height: 1.6; /* Adjust line height for better readability */
+  margin-bottom: 15px; /* Add margin between paragraphs */
+}
+
+/* Additional styling for other elements as needed */
+
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+footer ul {
+  list-style: none;
+  padding:0;
+}
+footer li {
+  cursor: pointer;
+  text-align: center;
+}
+footer a {
+  padding: 0 10px;
 }
 
 @keyframes logo-spin {
@@ -31,12 +124,4 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

@@ -5,9 +5,10 @@ import Footer from '../footer/Footer';
 import Navigation from '../links/navigation';
 import Register from '../signup/Register';
 import Main from './Main';
+import Basic from './Basic';
 
 function MainPage() {
-  const [isSignedIn, setIsSignedIn] = React.useState(false);
+  const [isSignedIn, setIsSignedIn] = React.useState(true);
 
   const handleLogin = (username, password) => {
     // Implement your authentication logic here
@@ -24,10 +25,7 @@ function MainPage() {
         <Routes>
           <Route path="/signin" element={!isSignedIn ? <LoginForm onLogin={handleLogin} /> : <Navigate to="/" />} />
           <Route path="/register" element={!isSignedIn ? <Register /> : <Navigate to="/" />} />
-          <Route
-            path="/"
-            element={isSignedIn ? <Main /> : <h1>Master Rahm is here to win in 2024</h1>}
-          />
+          <Route path="/" element={isSignedIn ? <Basic /> : <Main />} />
 
           {/* Add more routes as needed */}
         </Routes>

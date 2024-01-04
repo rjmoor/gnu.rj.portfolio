@@ -1,7 +1,7 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import './App.css';
 import background from './assets/backie.png'; 
 import MainPage from './components/pages/MainPage';
+import './App.css';
 
 
 function Canvas() {
