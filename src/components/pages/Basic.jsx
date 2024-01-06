@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import LoginForm from '../signup/Signin_form';
 
-function Main() {
+
+function Basic() {
 
     return (
         <div className='main-content'>
@@ -20,4 +19,4 @@ function Main() {
     )
 }
 
-export default Main
+export default Basic

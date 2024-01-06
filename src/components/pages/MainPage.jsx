@@ -1,14 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import LoginForm from '../signup/Signin_form';
+import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from '../footer/Footer';
 import Navigation from '../links/navigation';
 import Register from '../signup/Register';
-import Main from './Main';
+import LoginForm from '../signup/Signin_form';
 import Basic from './Basic';
+import Main from './Main';
+import WelcomePage from './Welcome';
 
 function MainPage() {
-  const [isSignedIn, setIsSignedIn] = React.useState(true);
+  const [isSignedIn, setIsSignedIn] = React.useState(false);
 
   const handleLogin = (username, password) => {
     // Implement your authentication logic here
@@ -23,9 +24,10 @@ function MainPage() {
 
         {/* Define Routes */}
         <Routes>
-          <Route path="/signin" element={!isSignedIn ? <LoginForm onLogin={handleLogin} /> : <Navigate to="/" />} />
-          <Route path="/register" element={!isSignedIn ? <Register /> : <Navigate to="/" />} />
-          <Route path="/" element={isSignedIn ? <Basic /> : <Main />} />
+          <Route path="/signin" element={isSignedIn ? <LoginForm onLogin={handleLogin} /> : <Navigate to="/" />} />
+          <Route path="/register" element={isSignedIn ? <Register /> : <Navigate to="/" />} />
+          <Route path="/test" element={isSignedIn ? <Basic /> : <Navigate to="/" />} />
+          <Route path="/gnu.rj.portfolio" element={isSignedIn ? <Main /> : <WelcomePage />} />
 
           {/* Add more routes as needed */}
         </Routes>

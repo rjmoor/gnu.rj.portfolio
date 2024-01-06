@@ -1,25 +1,17 @@
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import background from './assets/backie.png'; 
-import MainPage from './components/pages/MainPage';
+// import MainPage from './components/pages/MainPage';
 import './App.css';
+import WelcomePage from './components/pages/welcome';
 
 
-function Canvas() {
+function App() {
 
   return (
+    
     <div>
-      <Parallax pages={1}>
-        {/* Background  Layer */}
-        <ParallaxLayer offset={0} speed={1}className='parallax-background' style={{ backgroundImage: `url(${background})` }}>
-        </ParallaxLayer>
-        {/* Content Layer */}
-        <ParallaxLayer offset={0} speed={2.0}>
-          <MainPage />
-        </ParallaxLayer>
-      </Parallax>
+      <WelcomePage />
     </div>
 
   )
 }
 
-export default Canvas
+export default App
