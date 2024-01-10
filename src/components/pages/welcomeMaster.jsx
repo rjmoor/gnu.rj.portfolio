@@ -70,7 +70,7 @@ function WelcomeMaster() {
                     <h2>About Me</h2>
                     <p className="about-text-1">
                         <span className='text-xl'>Allow me to introduce myself - I am R J Moore,</span> a highly versatile professional with a
-                        <span className='text-l'> passion </span>for customer service, engineering, and web development. With 15 years of experience in the field of customer service, I have developed a keen eye for detail, a strong commitment to client satisfaction, and exceptional communication skills. Throughout my career, I have consistently surpassed expectations, ensuring that each customer interaction is a positive and enriching experience.
+                        <span className='text-l'> passion </span>for customer service, engineering, and <span className='text-l'>web development.</span> With 15 years of experience in the field of customer service, I have developed a keen eye for detail, a strong commitment to client satisfaction, and exceptional communication skills. Throughout my career, I have consistently surpassed expectations, ensuring that each customer interaction is a positive and enriching experience.
 
                         For the past decade, I have worked as an Engineering Technician, specializing in the fascinating realm of automation and robotics. This field has allowed me to acquire an extensive skill set, working with state-of-the-art technologies, troubleshooting complex issues, and implementing innovative solutions. My deep understanding of engineering principles and ability to navigate intricate systems propelled me to the forefront of my field.
                     </p>
