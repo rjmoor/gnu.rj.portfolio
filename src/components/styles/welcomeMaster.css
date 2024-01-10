@@ -1,35 +1,67 @@
+/* General Styles */
 .App {
     text-align: center;
 }
+
+/* Navigation Bar Styles */
+.navbar, .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 1000;
+    background: linear-gradient(270deg, #011B56 ,#5b6d92);
+}
+.main-nav ul {
+    list-style: none;
+    margin: 0 0 0 50px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+.main-nav ul li {
+    margin-right: 20px;
+}
+.main-nav ul li a {
+    text-decoration: none;
+    color: #ffbe98;
+    font-weight: bold;
+}
+
 .grid-hero-container {
     display: grid;
 }
+
+
+/* Hero Section Styles */
 .top-web-heading {
     position: absolute;
     top: 75px;
     left: 40px;
-    margin: 50px;
     font-size: 300rem;
+    margin: 50px;
 }
-.top-web-heading h1 {
+.top-web-heading h1, .top-web-heading h2 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 8rem;
-    font-weight: 300;
-    margin: 0;
-    padding: 0 35px;
-}
-.top-web-heading h2 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 5rem;
-    font-weight: 100;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.5);
     margin: 0;
     padding: 0;
 }
+.top-web-heading h1 {
+    font-size: 8rem;
+    font-weight: 300;
+}
+.top-web-heading h2 {
+    font-size: 5rem;
+    font-weight: 100;
+}
+
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(270deg, #011B56, #bfc9d0, #83a1b7, #5b6d92);
+    background: linear-gradient(270deg, #011B56, #53585c, #83a1b7, #5b6d92);
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
     position: relative;
@@ -101,20 +133,12 @@ button {
     background-color: #000000; /* Button background color */
     color: #ffffff; /* Button text color */
     border: none; /* Removing the default border */
-    outline: 2px solid #ffffff; /* Adding an outline */
     padding: 0 20px; /* Padding inside the button */
     border-radius: 5px; /* Rounded corners for the button */
     cursor: pointer; /* Cursor changes to pointer when hovering over the button */
     font-size: 1em; /* Font size for the text inside the button */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     transition: background-color 0.3s, color 0.3s; /* Transition effect for hover state */
-}
-button:hover {
-    background-color: #000000; /* Background color on hover */
-    color: #ffffff; /* Text color on hover */
-}
-
-button {
     border-radius: 8px;
     border: 1px solid transparent;
     padding: 0.6em 1.2em;
@@ -126,17 +150,58 @@ button {
     transition: border-color 0.25s;
 }
 button:hover {
-    border-color: #646cff;
+    background-color: #000000; /* Background color on hover */
+    border-color: #ffffff;
+    color: #83a1b7; /* Text color on hover */
+    outline: 4px solid #F87C56; /* Adding an outline */
 }
 button:focus,
 button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
 }
 
+
+/* About Me Section Styles */
 .about-me {
-    height: 75vh;
-    padding: 50px;
-    background: linear-gradient(270deg, #F87C56,  #ffbe98 );
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(270deg, #F87C56, #ffbe98);
+}  
+.about-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    padding: 10px;
+}
+.about-text {
+    transform: translateX(2);
+    will-change: transform;
+}
+.about-content > p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    /* margin-bottom: 15px; */
+    margin: 15px 0;
+}
+.about-content h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    margin: 20px 0;
+    padding: 0;
+    font-size: 10em;
+}
+.text-xl {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2.1rem;
+}
+.text-l {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2.2rem;
 }
 
 .projects {
@@ -172,64 +237,34 @@ button:focus-visible {
     font-size: 2rem;
 }
 
-/*  */
-.navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Tooltip Styles */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.tooltip-text {
+    visibility: hidden;
+    text-align: center;
     width: 100%;
-    display:inline-flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    z-index: 1000;;
+    height: 30px;
+    background-color: #F87C56;
+    color: #000000;
+    text-align: center;
+    border-radius: 2px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    bottom: 100%;
+    left: 250px;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
-
-.main-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    z-index: 1000;
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }
-.main-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.main-nav ul li {
-    margin-bottom: 10px; /* Spacing between menu items */
-}
-.main-nav ul li a {
-    text-decoration: none;
-    color: black; /* Change as needed */
-    font-weight: bold;
-}
-.main-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    z-index: 1000;
-    width: 100%; /* Stretch the navbar across the full width */
-    background: linear-gradient(270deg, #011B56 ,#5b6d92);
-}
-.main-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Aligns children (li) in a row */
-    justify-content: flex-start; /* Aligns items to the start of the container */
-}
-.main-nav ul li {
-    margin-right: 20px; /* Spacing between menu items */
-}
-.main-nav ul li a {
-    text-decoration: none;
-    color: black; /* Change as needed */
-    font-weight: bold;
-}
-
 
 /*  */
 @keyframes gradientAnimation {
@@ -251,6 +286,11 @@ button:focus-visible {
         /* left: 30px; */
         margin:50px;
         /* text-align: left; */
+    }
+    .tooltip-text {
+        height: 40px;
+        left: 190px;
+        top: 30px;
     }
 }
 
@@ -300,6 +340,12 @@ button:focus-visible {
     .contact-form h1 {
         font-size: 5vw; /* Adjust the heading size */
     }
+
+    .tooltip-text {
+        height: 40px;
+        left: 190px;
+        top: 30px;
+    }
 }
 
 /* Media Query for Small Screens (Mobile Devices) */
@@ -346,5 +392,10 @@ button:focus-visible {
 
     .form-field label, .form-field input, .form-field textarea {
         font-size: 0.8rem; /* Adjust font size of form fields */
+    }
+    .tooltip-text {
+        height: 40px;
+        left: 140px;
+        top: 10px;
     }
 }

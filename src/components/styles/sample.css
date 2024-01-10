@@ -1,31 +1,111 @@
-.contact-form {
-    background-color: rgba(0, 0, 0, 0.8); /* 80% transparent black */
+/* General Styles */
+.App {
+    text-align: center;
+}
+
+/* Navigation Bar Styles */
+.navbar, .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     padding: 20px;
-    border-radius: 5px;
-    color: white; /* or any color you prefer for the text */
-  }
-  
-  .form-field {
-    margin-bottom: 15px;
-    text-align: right;
-  }
-  
-  .form-field label {
-    margin-right: 10px;
-  }
-  
-  .form-field input, .form-field textarea {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid white; /* Underline for input fields */
-    color: white; /* Input text color */
-  }
-  
-  .form-field input:focus, .form-field textarea:focus {
-    outline: none;
-  }
-  
-  button {
-    /* Style for the submit button */
-  }
-  
+    z-index: 1000;
+    background: linear-gradient(270deg, #011B56 ,#5b6d92);
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0 0 0 50px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main-nav ul li {
+    margin-right: 20px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #ffbe98;
+    font-weight: bold;
+}
+
+/* Hero Section Styles */
+.top-web-heading {
+    position: absolute;
+    top: 75px;
+    left: 40px;
+    font-size: 300rem;
+    margin: 50px;
+}
+
+.top-web-heading h1, .top-web-heading h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    margin: 0;
+    padding: 0;
+}
+
+.top-web-heading h1 {
+    font-size: 8rem;
+    font-weight: 300;
+}
+
+.top-web-heading h2 {
+    font-size: 5rem;
+    font-weight: 100;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(270deg, #011B56, #53585c, #83a1b7, #5b6d92);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ... (Other styles) ... */
+
+/* Tooltip Styles */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Keyframes for Animations */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Media Queries */
+/* ... (Existing media queries) ... */
