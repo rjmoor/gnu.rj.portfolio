@@ -1,60 +1,83 @@
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import Background_a from "../../assets/Portfolio-Background-0a.png";
-import Background_b from "../../assets/Portfolio-Background-0b.png";
-import Background_c from "../../assets/Portfolio-Background-0c.png";
-import Background_d from "../../assets/Portfolio-Background-0d.png";
-import Background_e from "../../assets/Portfolio-Background-0e.png";
-import "../styles/welcomeMaster.css";
+import { useState } from 'react';
+import { FaGithub, FaLinkedin, FaTiktok } from 'react-icons/fa';
+import { Parallax } from 'react-scroll-parallax';
+import '../styles/welcomeMaster.css';
+import ProfileBackground from '../../assets/Ra-effortless.jpg';
 
-export default function WelcomeMaster() {
+function WelcomeMaster() {
+    const [contact, setContact] = useState({ name: '', email: '', message: '' });
+
+    const handleInputChange = (event) => {
+        setContact({ ...contact, [event.target.name]: event.target.value });
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        alert('Form submitted successfully!');
+    // Handle form submission logic here
+    };
 
     return (
-        <Parallax pages={6} className='parallax'>
-            <div className="container">
-                <ParallaxLayer className='heroLayer' offset={0} speed={2}>
-                    <div className="elements">
-                        <div className="hero">
-                            <h1 className="hero">Welcome to your Space and Time Rahm</h1>
+        <div className="App">
+            <section id="hero" className="hero">
+                <div className="navbar">
+                    <nav className="main-nav">
+                        <ul>
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#about-me">About</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            {/* Add other sections as needed */}
+                        </ul>
+                    </nav>
+                </div>
+                <div className="hero-content">
+                    <div className='top-web-heading'>
+                        <h1>Hi, I&apos;m R. J.</h1>
+                        <h2>a master at Web Development</h2>
+                    </div>
+                    <form onSubmit={handleSubmit} className="contact-form">
+                        <h1>Contact Me</h1>
+                        <div className="form-field">
+                            <label htmlFor="name">Please enter your name</label>
+                            <input type="text" id="name" name="name" value={contact.name} onChange={handleInputChange} placeholder='First name is required.'/>
                         </div>
-                        <div className="first">
-                            <p className="firstTagLine">This is a place for you to create, build, and explore your ideas.</p>
+                        <div className="form-field">
+                            <label htmlFor="email">Please enter your email</label>
+                            <input type="email" id="email" name="email" value={contact.email} onChange={handleInputChange} placeholder='Your email address is...'/>
                         </div>
-                        <div className='background'>
-                            <img src={Background_a} alt="background1" className="back-a"/>
-                            <img src={Background_b} alt="background2" className="back-b"/>
-                            <img src={Background_c} alt="background3" className="back-c"/>
-                            <img src={Background_d} alt="background4" className="back-d"/>
-                            <img src={Background_e} alt="background5" className="back-e" />
+                        <div className="form-field">
+                            <label htmlFor="message">Please write a message</label>
+                            <textarea id="message" name="message" value={contact.message} onChange={handleInputChange} placeholder='I would like to know more about you...'></textarea>
                         </div>
+                        <button type="submit">Send</button>
+                    </form>
+                    <div className="hero-image">
+                        <img src={ProfileBackground} alt='Ra-legacy' />
                     </div>
-                </ParallaxLayer>
-                <ParallaxLayer className='introLayer' offset={1} speed={1}>
-                    <div className="intro">
-                        <p className="firstParagraph">This is a place for you to create, build, and explore your ideas.</p>
-                    </div>
-                </ParallaxLayer>
-                <ParallaxLayer className='promoLayer' offset={2} speed={1}>
-                    <div className="promo-1">
-                        <p className="promo-1">This is the second parallax page section - About</p>
-                    </div>
-                </ParallaxLayer>
-                <ParallaxLayer className='heroLayer' offset={3} speed={1}>
-                    <div className="promo-2">
-                        <p className="promo-2">This is the third parallax page section - Projects</p>
-                    </div>
-                </ParallaxLayer>
-                <ParallaxLayer className='heroLayer' offset={4} speed={1}>
-                    <div className="promo-3">
-                        <p className="promo-3">This is the fourth parallax page section - Contact form</p>
-                    </div>
-                </ParallaxLayer>
-                <ParallaxLayer className='heroLayer' offset={5} speed={1}>
-                    <div className="promo-4">
-                        <p className="promo-4">(optional footer)This is the fifth parallax page section</p>
-                    </div>
-                </ParallaxLayer>
-            </div>
-        </Parallax>       
-    )
+                </div>
+            </section>
+            
+            <section className="about-me">
+                <h2>About Me</h2>
+                <p>Your about me content goes here</p>
+            </section>
 
+            <section className="projects">
+            {/* Repeat this block for each project */}
+                <div className="project-card">
+                    <h3>Project Title</h3>
+                    <p>Project Description</p>
+                    <a href="https://github.com/your-github-link">View on GitHub</a>
+                </div>
+            </section>
+
+            <footer className="footer">
+                <a href="https://tiktok.com/yourprofile"><FaTiktok /></a>
+                <a href="https://linkedin.com/in/yourprofile"><FaLinkedin /></a>
+                <a href="https://github.com/yourprofile"><FaGithub /></a>
+            </footer>          
+        </div>
+    );
 }
+
+export default WelcomeMaster;

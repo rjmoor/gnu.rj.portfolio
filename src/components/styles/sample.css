@@ -1,0 +1,31 @@
+.contact-form {
+    background-color: rgba(0, 0, 0, 0.8); /* 80% transparent black */
+    padding: 20px;
+    border-radius: 5px;
+    color: white; /* or any color you prefer for the text */
+  }
+  
+  .form-field {
+    margin-bottom: 15px;
+    text-align: right;
+  }
+  
+  .form-field label {
+    margin-right: 10px;
+  }
+  
+  .form-field input, .form-field textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white; /* Underline for input fields */
+    color: white; /* Input text color */
+  }
+  
+  .form-field input:focus, .form-field textarea:focus {
+    outline: none;
+  }
+  
+  button {
+    /* Style for the submit button */
+  }
+  

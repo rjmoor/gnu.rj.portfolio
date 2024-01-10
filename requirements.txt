@@ -1,2 +1,4 @@
 @react-spring/parallax
 react-router-dom
+react-scroll-parallax 
+react-icons

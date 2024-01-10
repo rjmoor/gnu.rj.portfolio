@@ -91,18 +91,16 @@
 
 /* Footer */
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
-  text-align: center;
+  height: 100%;
 }
 footer ul {
   list-style: none;
-  padding:0;
 }
 footer li {
   cursor: pointer;
-  text-align: center;
 }
 footer a {
   padding: 0 10px;
