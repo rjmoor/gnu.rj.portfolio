@@ -211,8 +211,7 @@ article {
 }
 .about-text {
     text-align: center;
-    width: 75vw;
-    transform: translateX(horizontalScroll 10s linear infinite);
+    /* transform: translateX(horizontalScroll 10s linear infinite); */
 }
 .about-content > p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;

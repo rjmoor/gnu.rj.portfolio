@@ -19,11 +19,6 @@ body {
 }
 
 /* Existing Styles */
-p {
-  margin: auto 300px;
-  line-height: 1.6; /* Adjust line height for better readability */
-  margin-bottom: 15px; /* Add margin between paragraphs */
-}
 
 /* Additional styling for other elements as needed */
 
