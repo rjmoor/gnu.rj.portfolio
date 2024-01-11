@@ -78,6 +78,7 @@
     background: #f09090;
     display:inline;
     width: 100%;
+    z-index: 900;
 
     /* background-image: url("../../assets/under_construction-0.0.png");  */
 }
