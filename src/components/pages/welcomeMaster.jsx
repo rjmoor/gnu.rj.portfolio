@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { FaGithub, FaLinkedin, FaTiktok } from 'react-icons/fa';
-import { Parallax } from 'react-scroll-parallax';
 import '../styles/welcomeMaster.css';
 import ProfileBackground from '../../assets/Ra-effortless.jpg';
 
@@ -36,8 +35,9 @@ function WelcomeMaster() {
                 </div>
                 <div className="hero-content">
                     <div className='top-web-heading'>
-                        <h1>Hi, I&apos;m R. J.</h1>
+                        <h1 className='message'> I&apos;m R. J.</h1>
                         <h2>I&apos;m a master at Web Development</h2>
+                        <h3>This page is under construction</h3>
                     </div>
                     <form onSubmit={handleSubmit} className="contact-form">
                         <div className="tooltip-container">
@@ -68,25 +68,37 @@ function WelcomeMaster() {
             <section className="about-me">
                 <div className="about-content">
                     <h2>About Me</h2>
-                    <p className="about-text-1">
-                        <span className='text-xl'>Allow me to introduce myself - I am R J Moore,</span> a highly versatile professional with a
-                        <span className='text-l'> passion </span>for customer service, engineering, and <span className='text-l'>web development.</span> With 15 years of experience in the field of customer service, I have developed a keen eye for detail, a strong commitment to client satisfaction, and exceptional communication skills. Throughout my career, I have consistently surpassed expectations, ensuring that each customer interaction is a positive and enriching experience.
+                    <div className='about-articles'>
+                                    <article>
+                                        <h3>Heading 1</h3>
+                                        <p className="about-text">
+                                            Allow me to introduce myself - I am <span className="text-l">R J Moore</span>, a highly versatile professional with a passion for <span className="text-l">customer service</span>, <span className="text-l">engineering</span>, and <span className="text-l">web development</span>. With <span className="text-l">15 years of experience</span> in the field of customer service, I have developed a keen eye for detail, a strong commitment to client satisfaction, and exceptional communication skills. Throughout my career, I have consistently surpassed expectations, ensuring that each customer interaction is a positive and enriching experience. For the past <span className="text-l">decade</span>, I have worked as an <span className="text-l">Engineering Technician</span>, specializing in the fascinating realm of <span className="text-l">automation</span> and <span className="text-l">robotics</span>. This field has allowed me to acquire an extensive skill set, working with state-of-the-art technologies, troubleshooting complex issues, and implementing innovative solutions. My deep understanding of engineering principles and ability to navigate intricate systems propelled me to the forefront of my field.
+                                        </p>
+                                    </article>
+                                <article>
+                                    <h3>Heading 2</h3>
+                                    <p className="about-text">
+                                        Driven by a desire to embrace new challenges and expand my horizons, I successfully transitioned into my current role as a <span className="text-l">Front End Web Author</span>. Drawing on my technical acumen and creative flair, I now have the privilege of crafting captivating and user-friendly web experiences. By seamlessly blending aesthetics and functionality, I create web solutions that engage users on multiple platforms. My proficiency in <span className="text-l">HTML</span>, <span className="text-l">CSS</span>, and <span className="text-l">JavaScript</span> enables me to bring ideas to life and deliver exceptional results.
+                                    </p>
+                                </article>
+                        <article>
+                            <h3>Heading 3</h3>
+                            <p className="about-text">
+                                Furthermore, I am formally trained as a <span className="text-l">Python Technical Consultant</span>, augmenting my skill set and providing me with a comprehensive understanding of back-end web development. This expertise allows me to bridge the gap between front-end design and back-end functionality, ensuring cohesive and robust web solutions that meet and exceed expectations.
 
-                        For the past decade, I have worked as an Engineering Technician, specializing in the fascinating realm of automation and robotics. This field has allowed me to acquire an extensive skill set, working with state-of-the-art technologies, troubleshooting complex issues, and implementing innovative solutions. My deep understanding of engineering principles and ability to navigate intricate systems propelled me to the forefront of my field.
-                    </p>
-                    <p className="about-text-2">
-                        Driven by a desire to embrace new challenges and expand my horizons, I successfully transitioned into my current role as a Front End Web Author. Drawing on my technical acumen and creative flair, I now have the privilege of crafting captivating and user-friendly web experiences. By seamlessly blending aesthetics and functionality, I create web solutions that engage users on multiple platforms. My proficiency in HTML, CSS, and JavaScript enables me to bring ideas to life and deliver exceptional results.
-
-                        Furthermore, I am formally trained as a Python Technical Consultant, augmenting my skill set and providing me with a comprehensive understanding of back-end web development. This expertise allows me to bridge the gap between front-end design and back-end functionality, ensuring cohesive and robust web solutions that meet and exceed expectations.
-                    </p>
-                    <p className="about-text-3">
-                        With my diverse background in customer service, engineering, and web development, I bring a unique perspective and a multifaceted skill set to any project. I thrive in collaborative environments and am committed to delivering excellence in every endeavor. My passion for continuous improvement, combined with my adaptability to diverse roles, makes me an invaluable asset to any team.
-
-                        In summary, I am R J Moore - a consummate professional with 15 years of experience in customer service, a decade of expertise as an Engineering Technician in automation and robotics, and a current focus on front-end web development as a Web Author. With a proven track record of success across multiple industries, I am poised to make a significant impact and thrive in any professional endeavor.
-                    </p>
+                                With my diverse background in customer service, engineering, and web development, I bring a unique perspective and a multifaceted skill set to any project. I thrive in collaborative environments and am committed to delivering excellence in every endeavor. My passion for continuous improvement, combined with my adaptability to diverse roles, makes me an invaluable asset to any team.
+                            </p>    
+                                </article>
+                        <article>
+                            <h3>Heading 4</h3>
+                            <p className="about-text">
+                                In summary, I am <span className="text-l">R J Moore</span> - a consummate professional with <span className="text-l">15 years of experience</span> in customer service, a <span className="text-l">decade of expertise</span> as an Engineering Technician in automation and robotics, and a current focus on front-end web development as a Web Author. With a proven track record of success across multiple industries, I am poised to make a significant impact and thrive in any professional endeavor.
+                            </p>
+                                </article>
+                            
+                    </div>
                 </div>
             </section>
-
 
             <section className="projects">
             {/* Repeat this block for each project */}
