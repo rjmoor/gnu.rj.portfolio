@@ -109,3 +109,60 @@
 
 /* Media Queries */
 /* ... (Existing media queries) ... */
+
+
+/* 
+/* Media Query for Small Screens (Mobile Devices) */
+@media (max-width: 425px) {
+ 
+    .kicker-heading h1 {
+        font-size: 2.5rem; /* Further reduce the font size for small screens */
+    }
+    .kicker-heading h2 {
+        font-size: 4rem; /* Further reduce the font size for small screens */
+        line-height: 60px; 
+    }
+
+    .hero {
+        flex-direction: column; /* Ensure elements are stacked vertically */
+    }
+
+    .hero-content {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-image {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .contact-form {
+        /* position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 70vw; */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .contact-form h1 {
+        font-size: 6vw; /* Adjust the heading size */
+    }
+
+    .form-field label, .form-field input, .form-field textarea {
+        font-size: 0.8rem; /* Adjust font size of form fields */
+    }
+    .tooltip-text {
+        height: 40px;
+        left: 140px;
+        top: 10px;
+    }
+
+    .text-xl {
+        font-size: 1.5rem;
+    }
+    .text-l {
+        font-size: 1rem;
+    }
+} 
+*/

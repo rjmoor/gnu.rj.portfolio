@@ -18,7 +18,7 @@ function WelcomeMaster() {
 
     return (
         <div className="App">
-            <section id="hero" className="hero">
+            <section className="hero-section">
             {/* <div className="tooltip-container">
                     Hover over me!
                 <span className="tooltip-text">Tooltip text goes here</span>
@@ -33,34 +33,35 @@ function WelcomeMaster() {
                         </ul>
                     </nav>
                 </div>
-                <div className="hero-content">
-                    <div className='top-web-heading'>
-                        <h1 className='message'> I&apos;m R. J.</h1>
-                        <h2>I&apos;m a master at Web Development</h2>
+                <div className="grid-hero-content">
+                    <div className='kicker-heading'>
+                        <h1 className='message'> I&apos;m R.&nbsp;J.</h1>
+                        <h2>I&apos;m a master at Web&nbsp;Development</h2>
                         <h3>This page is under construction</h3>
                     </div>
-                    <form onSubmit={handleSubmit} className="contact-form">
-                        <div className="tooltip-container">
-                            <h1>Contact Me</h1>
-                            <span className="tooltip-text">This form will send an email to me.</span>
-                        </div>
-                        
-                        <div className="form-field">
-                            <label htmlFor="name">Please enter your name</label>
-                            <input type="text" id="name" name="name" value={contact.name} onChange={handleInputChange} placeholder='First name is required.'/>
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="email">Please enter your email</label>
-                            <input type="email" id="email" name="email" value={contact.email} onChange={handleInputChange} placeholder='Your email address is...'/>
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="message">Please write a message</label>
-                            <textarea id="message" name="message" value={contact.message} onChange={handleInputChange} placeholder='I would like to know more about you...'></textarea>
-                        </div>
-                        <button type="submit">Send</button>
-                    </form>
                     <div className="hero-image">
                         <img src={ProfileBackground} alt='Ra-legacy' />
+                    </div>
+                    <div className='kicker-form'>
+                        <form onSubmit={handleSubmit} className="contact-form">
+                            <div className="tooltip-container">
+                                <h1>Contact Me</h1>
+                                <span className="tooltip-text">This form will send an email to me.</span>
+                            </div>                        
+                            <div className="form-field">
+                                <label htmlFor="name">Please enter your name</label>
+                                <input type="text" id="name" name="name" value={contact.name} onChange={handleInputChange} placeholder='First name is required.'/>
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="email">Please enter your email</label>
+                                <input type="email" id="email" name="email" value={contact.email} onChange={handleInputChange} placeholder='Your email address is...'/>
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="message">Please write a message</label>
+                                <textarea id="message" name="message" value={contact.message} onChange={handleInputChange} placeholder='I would like to know more about you...'></textarea>
+                            </div>
+                            <button type="submit">Send</button>
+                        </form>
                     </div>
                 </div>
             </section>
