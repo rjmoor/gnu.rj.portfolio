@@ -1,5 +1,6 @@
 import './App.css';
 import WelcomeMaster from './components/pages/welcomeMaster';
+import SignUp from './components/signup/sign_3';
 
 
 function App() {
@@ -7,8 +8,8 @@ function App() {
   return (
     
     <div>
+      <SignUp />
       <WelcomeMaster />
-      {/* <WelcomePage /> */}
     </div>
 
   )
