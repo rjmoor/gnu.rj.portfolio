@@ -1,17 +1,26 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
 /* General Styles */
-.App {
-    text-align: center;
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 /* Navigation Bar Styles */
-.navbar, .main-nav {
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px;
+    background: linear-gradient(270deg, #011B56, #5b6d92);
     z-index: 1000;
-    background: linear-gradient(270deg, #011B56 ,#5b6d92);
 }
 
 .main-nav ul {
@@ -32,137 +41,184 @@
     font-weight: bold;
 }
 
+.main-nav ul li a:hover {
+    color: #ffffff;
+}
+
 /* Hero Section Styles */
-.top-web-heading {
-    position: absolute;
-    top: 75px;
-    left: 40px;
-    font-size: 300rem;
-    margin: 50px;
-}
-
-.top-web-heading h1, .top-web-heading h2 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-    margin: 0;
-    padding: 0;
-}
-
-.top-web-heading h1 {
-    font-size: 8rem;
-    font-weight: 300;
-}
-
-.top-web-heading h2 {
-    font-size: 5rem;
-    font-weight: 100;
-}
-
-.hero {
+.hero-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(270deg, #011B56, #53585c, #83a1b7, #5b6d92);
+    background: linear-gradient(270deg, #011B56, #6ca0cb, #83a1b7, #5b6d92);
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
     position: relative;
     overflow: hidden;
+    z-index: -100;
+    min-height: 100vh;
 }
 
-/* ... (Other styles) ... */
+.kicker-heading {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    margin: 50px;
+    padding-top: 150px;
+    z-index: 1;
+}
 
-/* Tooltip Styles */
-.tooltip-container {
-    position: relative;
-    display: inline-block;
+.kicker-heading h1, .kicker-heading h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 1px 2px 10px rgba(0,0,0,0.5);
+    margin: 0;
+    padding: 0;
+}
+
+.kicker-heading h1 {
+    font-size: 8rem;
+    font-weight: 300;
+}
+
+.kicker-heading h2 {
+    font-size: 5rem;
+    font-weight: 100;
+}
+
+.kicker-heading h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 100;
+    color: red;
+    background: white;
+    transition: ease-in-out 0.5s;
+}
+
+.kicker-heading > h3:hover {
+    color: #707070;
+    background: rgb(0, 0, 0);
+}
+
+.grid-hero-content {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 0.5fr);
+    grid-template-rows: 1fr 0.5fr;
+}
+
+.hero-image {
+    grid-column: 2 / 5;
+    grid-row: 1 / 3;
+    padding: 40px;
+    z-index: 0;
+}
+
+.hero-image img {
+    width: 60%;
+    margin-top: 50px;
+}
+
+.kicker-form {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    z-index: 2;
+    margin-top: 50px;
+}
+
+.contact-form {
+    background: linear-gradient(270deg, #011B56, #5b6d92);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: medium;
+    font-weight: 100;
+    margin: 10px 20px;
+    margin-left: 20px;
+    padding: 20px 100px;
+}
+
+.contact-form h1 {
+    font-size: 3.5vw;
+    text-align: left;
+}
+
+.contact-form input {
+    width: 50%;
+    padding: 0 50px;
+    margin: 10;
+    border-radius: 0px;
+    border: none;
+}
+
+.form-field {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-field label {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.form-field input, .form-field textarea {
+    font-family: inherit;
+    width: 100%;
+    margin-top: 5px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.form-field input:focus, .form-field textarea:focus {
+    outline: none;
+    border-bottom: 2px solid white;
+}
+
+button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 0 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #000000;
     cursor: pointer;
 }
 
-.tooltip-text {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: white;
+/* Add hover styles */
+button:hover {
+    background-color: #000000;
+    color: #83a1b7;
+    border-color: #ffffff;
+    outline: 4px solid #F87C56;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #000000;
+    color: #ffffff;
     text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 0.3s;
+    padding: 20px 0;
+    font-size: 1rem;
 }
 
-.tooltip-container:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-/* Keyframes for Animations */
+/* Animation for Hero Section Background Gradient */
 @keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
-
-/* Media Queries */
-/* ... (Existing media queries) ... */
-
-
-/* 
-/* Media Query for Small Screens (Mobile Devices) */
-@media (max-width: 425px) {
- 
-    .kicker-heading h1 {
-        font-size: 2.5rem; /* Further reduce the font size for small screens */
-    }
-    .kicker-heading h2 {
-        font-size: 4rem; /* Further reduce the font size for small screens */
-        line-height: 60px; 
-    }
-
-    .hero {
-        flex-direction: column; /* Ensure elements are stacked vertically */
-    }
-
-    .hero-content {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .hero-image {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .contact-form {
-        /* position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 70vw; */
-        padding: 15px; /* Adjust padding */
-    }
-
-    .contact-form h1 {
-        font-size: 6vw; /* Adjust the heading size */
-    }
-
-    .form-field label, .form-field input, .form-field textarea {
-        font-size: 0.8rem; /* Adjust font size of form fields */
-    }
-    .tooltip-text {
-        height: 40px;
-        left: 140px;
-        top: 10px;
-    }
-
-    .text-xl {
-        font-size: 1.5rem;
-    }
-    .text-l {
-        font-size: 1rem;
-    }
-} 
-*/

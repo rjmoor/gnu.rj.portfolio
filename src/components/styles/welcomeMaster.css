@@ -31,6 +31,9 @@
     color: #ffbe98;
     font-weight: bold;
 }
+a:hover {
+    color: #ffffff;
+}
 
 .hero-section {
     display: flex;
@@ -83,7 +86,7 @@
 }
 .message::before {
     content: "Hi there,";
-    background: #f09090;
+    background: #ffbe98;
     display:inline;
     width: 100%;
     z-index: 900;
@@ -142,6 +145,39 @@
     border-radius: 0px;
     border: none;
 }
+/* Add this CSS code for the hover effect */
+.contact-form button {
+    background-color: #000000; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none; /* Removing the default border */
+    padding: 0 20px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Cursor changes to pointer when hovering over the button */
+    font-size: 1em; /* Font size for the text inside the button */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: background-color 0.3s, color 0.3s; /* Transition effect for hover state */
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #000000;
+    cursor: pointer;
+}
+
+/* Add hover styles */
+.contact-form button:hover {
+    background-color: #000000; /* Background color on hover */
+    color: #83a1b7; /* Text color on hover */
+    border-color: #ffffff;
+    outline: 4px solid #F87C56; /* Adding an outline */
+}
+.contact-form button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
 .form-field {
     margin-bottom: 25px;
     text-align: left;
@@ -164,36 +200,6 @@
     border-bottom: 2px solid white;
 }
 
-button {
-    background-color: #000000; /* Button background color */
-    color: #ffffff; /* Button text color */
-    border: none; /* Removing the default border */
-    padding: 0 20px; /* Padding inside the button */
-    border-radius: 5px; /* Rounded corners for the button */
-    cursor: pointer; /* Cursor changes to pointer when hovering over the button */
-    font-size: 1em; /* Font size for the text inside the button */
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    transition: background-color 0.3s, color 0.3s; /* Transition effect for hover state */
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: #000000;
-    cursor: pointer;
-    transition: border-color 0.25s;
-}
-button:hover {
-    background-color: #000000; /* Background color on hover */
-    border-color: #ffffff;
-    color: #83a1b7; /* Text color on hover */
-    outline: 4px solid #F87C56; /* Adding an outline */
-}
-button:focus,
-button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-}
 
 /* About Me Section Styles */
 article {

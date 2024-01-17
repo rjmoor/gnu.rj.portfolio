@@ -29,6 +29,8 @@ function WelcomeMaster() {
                             <li><a href="#hero">Home</a></li>
                             <li><a href="#about-me">About</a></li>
                             <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Sign in</a></li>
+                            <li><a href="#contact">Sign up</a></li>
                             {/* Add other sections as needed */}
                         </ul>
                     </nav>

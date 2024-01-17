@@ -24,10 +24,10 @@ function SignUp({ onAuthenticate }) {
     };
 
     return (
-        <div className='container text'>
+        <div className='container'>
             <form onSubmit={handleSubmit}>
                 <div className='form-row'>
-                    <label htmlFor="name">Email:</label>
+                    <label htmlFor="email">Email:</label>
                     <input className='input-data'
                     type="email"
                     name="email"
@@ -49,7 +49,7 @@ function SignUp({ onAuthenticate }) {
                     />
                 </div>
                 <div className='form-row'>
-                    <label htmlFor="name">Password:</label>
+                    <label htmlFor="password">Password:</label>
                     <input className='input-data'
                     type="password"
                     name="password"
