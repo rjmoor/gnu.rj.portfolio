@@ -57,7 +57,8 @@ form .form-row .textarea{
   resize: none;
   padding-top: 10px;
 }
-.input-data label{
+.form-row label{
+  color: #9f01ea;
   position: relative;
   pointer-events: none;
   bottom: 10px;
