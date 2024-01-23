@@ -24,7 +24,7 @@ function SignUp({ onAuthenticate }) {
     };
 
     return (
-        <div className='container'>
+        <div className='form-container'>
             <form onSubmit={handleSubmit}>
                 <div className='form-row'>
                     <label htmlFor="email">Email:</label>
