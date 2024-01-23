@@ -44,7 +44,7 @@ a:hover {
     animation: gradientAnimation 15s ease infinite;
     position: relative;
     overflow: hidden;
-    z-index: 0;
+    z-index: 10;
 }
 
 /* Hero Section Styles */
@@ -206,12 +206,14 @@ article {
     position: relative;
     height: 100%;
     width: 100%;
+
 }
 .about-me {
     display: grid;
     gap:1rem;
     height: 100%;
     background: linear-gradient(270deg, #F87C56, #ffbe98);
+    z-index: 10;
 }  
 .about-content {
     display:block;
@@ -219,6 +221,7 @@ article {
     width: 75%;
     text-align: center;
     padding: 20px;
+ 
 }
 .about-articles {
     display: block;
@@ -295,6 +298,7 @@ article {
     background-color: #000000;
     color: rgb(30, 0, 255);
     gap: 20px;
+    z-index: 10;
 }
 .footer a {
     color: white;
