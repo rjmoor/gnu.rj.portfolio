@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { FaGithub, FaLinkedin, FaTiktok } from 'react-icons/fa';
 import '../styles/welcomeMaster.css';
 import ProfileBackground from '../../assets/Ra-effortless.jpg';
+import { projectInfo } from '../cards/projects/projects'
 
 function WelcomeMaster() {
     const [contact, setContact] = useState({ name: '', email: '', message: '' });
@@ -103,17 +104,17 @@ function WelcomeMaster() {
             </section>
 
             <section className="projects">
-                {/* Repeat this block for each project */}
-                <div className='projects-title'>
-                    <h2>Projects</h2>
-                    <h3>This section is under construction</h3>
-                </div>
-                <div className="project-card">
-                    <p>Project Description</p>
-                    <a href="https://github.com/your-github-link">View on GitHub</a>
+                <h1>Projects</h1>
+                <div className="project-cards">
+                    {projectInfo.map(info => (
+                        <div key={info.text} className="project-card">
+                            <h3 className='project-title'>{info.text}</h3>
+                            <p className="card-content">{ info.content}</p>
+                        </div>
+                    ))}
                 </div>
             </section>
-
+    
             <footer className="footer">
                 <a href="https://tiktok.com/yourprofile"><FaTiktok /></a>
                 <a href="https://linkedin.com/in/yourprofile"><FaLinkedin /></a>
