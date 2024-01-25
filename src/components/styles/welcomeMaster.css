@@ -7,7 +7,7 @@
 }
 
 /* Navigation Bar Styles */
-.navbar, .main-nav {
+.nav-section, .navbar, .main-nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -221,7 +221,6 @@ article {
     width: 75%;
     text-align: center;
     padding: 20px;
- 
 }
 .about-articles {
     display: block;
@@ -332,7 +331,7 @@ article {
     position: sticky;
     display: block;
     pointer-events: none; /* Ensures the cursor isn't blocked by the triangle */
-    z-index: 10;
+    z-index: 0;
 }
 
 /* Tooltip Styles */
