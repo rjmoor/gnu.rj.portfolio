@@ -322,6 +322,19 @@ article {
     font-size: 2rem;
 }
 
+/* Background Triangle */
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #F87C56;  /* Change color as needed */
+    position: sticky;
+    display: block;
+    pointer-events: none; /* Ensures the cursor isn't blocked by the triangle */
+    z-index: 10;
+}
+
 /* Tooltip Styles */
 .tooltip-container {
     position: relative;
