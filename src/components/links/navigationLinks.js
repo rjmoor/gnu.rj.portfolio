@@ -28,7 +28,17 @@
           <li>What do you believe to do?</li>
           <li>What do you want to know?</li>
           <li>Where do you need to go?</li>
-*/ 
+*/
+
+const simpleNavLinks = [
+    { text: 'Home', path: '/' },
+    { text: 'About', path: '#about' },
+    { text: 'Projects', path: '#projects' },
+    { text: 'Login', path: '/login' },
+    { text: 'Sign Up', path: '/sign-up' },
+    { text: 'Forgot Password', path: '/forgot-password' },
+
+]
 
 const signedInNavLinks = [
     
@@ -103,4 +113,4 @@ const otherPageLinks = [
 
 ]
 
-export  { signedInNavLinks, signedOutNavLinks, bottomNavLinks, socialLinks, otherPageLinks };
+export  { signedInNavLinks, signedOutNavLinks, bottomNavLinks, socialLinks, otherPageLinks, simpleNavLinks };

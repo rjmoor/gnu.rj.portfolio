@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin, FaTiktok } from 'react-icons/fa';
 import '../styles/welcomeMaster.css';
 import ProfileBackground from '../../assets/Ra-effortless.jpg';
 import { projectInfo } from '../cards/projects/projects'
+import { simpleNavLinks } from '../links/navigationLinks'
 
 function WelcomeMaster() {
     const [contact, setContact] = useState({ name: '', email: '', message: '' });
@@ -36,12 +37,11 @@ function WelcomeMaster() {
                 <div className="navbar">
                     <nav className="main-nav">
                         <ul>
-                            <li><a href="#hero">Home</a></li>
-                            <li><a href="#about-me">About</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#contact">Sign in</a></li>
-                            <li><a href="#contact">Sign up</a></li>
-                            {/* Add other sections as needed */}
+                            {simpleNavLinks.map((link) => (
+                                <li key={link.text}>
+                                    <a href={link.path}>{link.text}</a>
+                                </li>
+                            ))}
                         </ul>
                     </nav>
                 </div>
@@ -96,8 +96,8 @@ function WelcomeMaster() {
                     className="triangle" 
                     style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}
                 /> */}
-                    <div className="about-content">
-                        <h2>About Me</h2>
+                    <div className="about-content" id='#about'>
+                        <h2 >About Me</h2>
                     <div className="triangle" style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}></div>
                             <div className='about-articles'>
                                 <article>
@@ -131,8 +131,8 @@ function WelcomeMaster() {
                 </div>
             </section>
 
-            <section className="projects">
-                <h1>Projects</h1>
+            <section className="projects" id='#projects'>
+                <h1 >Projects</h1>
                 <div className="project-cards">
                     {projectInfo.map(info => (
                         <div key={info.text} className="project-card">
