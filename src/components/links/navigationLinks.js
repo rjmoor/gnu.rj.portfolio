@@ -36,8 +36,7 @@ const simpleNavLinks = [
     { text: 'Projects', path: '#projects' },
     { text: 'Login', path: '/login' },
     { text: 'Sign Up', path: '/sign-up' },
-    { text: 'Forgot Password', path: '/forgot-password' },
-
+    // { text: 'Forgot Password', path: '/forgot-password' },
 ]
 
 const signedInNavLinks = [
