@@ -68,16 +68,16 @@ function WelcomeMaster() {
 
             </section>
             <section className="hero-section">
-            <div className="tooltip-container">
+            {/* <div className="tooltip-container">
                     Hover over me!
                 <span className="tooltip-text">Tooltip text goes here</span>
-            </div>
+            </div> */}
                 
                 <div className="grid-hero-content">
                     <div className='kicker-heading'>
                         <h1 className='message'> I&apos;m R.&nbsp;J.</h1>
                         <h2>I&apos;m a master at Web&nbsp;Development</h2>
-                        <h3>This page is under construction</h3>
+                        {/* <h3>This page is under construction</h3> */}
                     </div>
                     <div className="hero-image">
                         <img src={ProfileBackground} alt='Ra-legacy' />
@@ -89,11 +89,11 @@ function WelcomeMaster() {
                                 <span className="tooltip-text">This form will send an email to me.</span>
                             </div>                        
                             <div className="form-field">
-                                <label htmlFor="name">Please enter your name</label>
+                                <label htmlFor="name">Enter your name</label>
                                 <input type="text" id="name" name="name" value={contact.name} onChange={handleInputChange} placeholder='First name is required.'/>
                             </div>
                             <div className="form-field">
-                                <label htmlFor="email">Please enter your email</label>
+                                <label htmlFor="email">Your email</label>
                                 <input type="email" id="email" name="email" value={contact.email} onChange={handleInputChange} placeholder='Your email address is...'/>
                             </div>
                             <div className="form-field">
@@ -129,6 +129,7 @@ function WelcomeMaster() {
                                 <div className="skill-bar-container">
                                     <div className="skill-bar" style={{ width: `${barWidths.engineering}%` }}></div>
                                 </div>
+                                <div className="horizontal-bar"></div>
                                 </article>
                                 <article>
                                     <h3>Front-end</h3>
@@ -157,7 +158,8 @@ function WelcomeMaster() {
                                 </p>
                                 </article>    
                             </div>
-                </div>
+                    <div className="horizontal-bar"></div>
+                    </div>
                 </div>
             </section>
 
