@@ -5,7 +5,7 @@ const HeroSection = ({ handleSubmit, handleInputChange, contact, error }) => (
     <section className="hero-section">
         <div className="grid-hero-content">
             <div className="kicker-heading">
-                <h1 className='message'>I&apos;m R.&nbsp;J.</h1>
+                <h1 className='message'> I&apos;m R.&nbsp;J.</h1>
                 <h2>I&apos;m a master at Web&nbsp;Development</h2>
             </div>
             <div className="hero-image">

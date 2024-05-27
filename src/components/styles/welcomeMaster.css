@@ -85,7 +85,7 @@
 }
 
 .message::before {
-    content: "Hi there, ";
+    content: "Hi there,";
     background: #ffbe98;
     display: inline;
     width: 100%;
@@ -108,7 +108,7 @@
 
 .hero-image img {
     width: 60%;
-    margin: 200px 0 0 25%;
+    margin: 260px 0 0 25%;
 }
 
 .kicker-form {
