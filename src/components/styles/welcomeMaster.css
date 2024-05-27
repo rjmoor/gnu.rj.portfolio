@@ -85,7 +85,7 @@
 }
 
 .message::before {
-    content: "Hi there,";
+    content: "Hi there, ";
     background: #ffbe98;
     display: inline;
     width: 100%;
