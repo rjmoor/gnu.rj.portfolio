@@ -3,7 +3,7 @@ import { projectInfo } from '../../cards/projects/projects';
 
 const Projects = () => (
     <section className="projects" id='#projects'>
-        <h1>Projects</h1>
+        <h2>Projects</h2>
         <div className="project-cards">
             {projectInfo.map(info => (
                 <div key={info.text} className="project-card">

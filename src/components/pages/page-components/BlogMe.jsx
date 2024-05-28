@@ -1,18 +1,38 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
 const AboutMe = ({ cursorPos }) => {
-    const bars = new Array(50).fill(0);
+    const aboutMeRef = useRef(null);
+    const [bars, setBars] = useState([]);
+
+    useEffect(() => {
+        const calculateBars = () => {
+            if (aboutMeRef.current) {
+                const containerHeight = aboutMeRef.current.offsetHeight;
+                const barHeight = 40; // Height of each bar plus margin
+                const numberOfBars = Math.floor(containerHeight / barHeight);
+                setBars(new Array(numberOfBars).fill(0));
+            }
+        };
+
+        calculateBars();
+        window.addEventListener('resize', calculateBars);
+
+        return () => {
+            window.removeEventListener('resize', calculateBars);
+        };
+    }, []);
 
     return (
-        <section className="about-me">
+        <section className="about-me" ref={aboutMeRef}>
             <div className="background-movement">
                 <div className="horizontal-bars">
                     {bars.map((_, index) => {
-                        const distance = Math.abs(cursorPos.y - (index * 20 + 10)); // Approximate the vertical position of each bar
-                        const isActive = distance < 50; // Activate bar if the mouse is within 50px vertically
-                        const width = isActive ? `${100 - distance}%` : '1%';
+                        const distance = Math.abs(cursorPos.y - (index * 20+150)); // Approximate the vertical position of each bar
+                        const isActive = distance < 70; // Activate bar if the mouse is within 70px vertically
+                        const width = isActive ? `${100 - distance}%` : '0%';
                         return (
-                            <div key={index} className="horizontal-bar" style={{ width }}></div>
+                            <div key={index} className="horizontal-bar" style={{ width, top: `${index * 20}px` }}></div>
                         );
                     })}
                 </div>
@@ -50,6 +70,13 @@ const AboutMe = ({ cursorPos }) => {
             </div>
         </section>
     );
+};
+
+AboutMe.propTypes = {
+    cursorPos: PropTypes.shape({
+        x: PropTypes.number.isRequired,
+        y: PropTypes.number.isRequired,
+    }).isRequired,
 };
 
 export default AboutMe;
